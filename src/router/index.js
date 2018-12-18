@@ -191,6 +191,26 @@ export const constantRouterMap = [
       }
     ]
   },
+  {
+    path: '/',
+    component: Layout,
+    redirect: 'InformationQuery',
+    meta:{ title: '信息查询', icon: 'shouye'},
+    children: [
+      {
+        path: 'orderQuery',
+        component: () => import('@/views/InformationQuery/orderQuery'),
+        name: 'orderQuery',
+        meta: { title: '订单查询', icon: 'shouye' }
+      },
+      {
+        path: 'sealQuery',
+        component: () => import('@/views/InformationQuery/sealQuery'),
+        name: 'sealQuery',
+        meta: { title: '印章查询', icon: 'shouye' }
+      }
+    ]
+  },
   {path:'*',component: () => import('@/views/404')}
   // {
   //   path: '/',
