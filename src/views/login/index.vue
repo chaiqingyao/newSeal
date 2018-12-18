@@ -25,7 +25,7 @@
       </el-form-item>
       <el-form-item>
         <el-button :loading="loading" type="primary" style="width:100%;" @click.native.prevent="handleLogin">
-          Sign in
+          登陆
         </el-button>
       </el-form-item>
       <div class="tips">
@@ -87,21 +87,22 @@ export default {
       }
     },
     handleLogin() {
-      this.$refs.loginForm.validate(valid => {
-        if (valid) {
-          this.loading = true
-          this.$store.dispatch('Login', this.loginForm).then(() => {
-            this.loading = false
-            // this.$router.push({ path: this.redirect || '/' })
-            this.$router.push({ path: "/" }); //登录成功之后重定向到首页
-          }).catch(() => {
-            this.loading = false
-          })
-        } else {
-          console.log('error submit!!')
-          return false
-        }
-      })
+      this.$router.push({ path: "/" });
+      // this.$refs.loginForm.validate(valid => {
+      //   if (valid) {
+      //     this.loading = true
+      //     this.$store.dispatch('Login', this.loginForm).then(() => {
+      //       this.loading = false
+      //       // this.$router.push({ path: this.redirect || '/' })
+      //       this.$router.push({ path: "/" }); //登录成功之后重定向到首页
+      //     }).catch(() => {
+      //       this.loading = false
+      //     })
+      //   } else {
+      //     console.log('error submit!!')
+      //     return false
+      //   }
+      // })
     }
   }
 }
