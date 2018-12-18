@@ -151,6 +151,8 @@
 // })
 
 
+
+
 import Vue from 'vue'
 import Router from 'vue-router'
 
@@ -176,7 +178,7 @@ import Layout from '../views/layout/Layout'
 **/
 export const constantRouterMap = [
   { path: '/login', component: () => import('@/views/login/index'), hidden: true },
-  { path: '/404', component: () => import('@/views/404'), hidden: true },
+  { path: '/404', component: () => import('@/views/404'), hidden: false },
 
   {
     path: '',
@@ -214,14 +216,14 @@ export const constantRouterMap = [
   //   ]
   // },
   // {
-    //   path: '/',
-    //   component: Layout,
-    //   redirect: 'noredirect',
-    //   name: 'diandang',
+//   path: '/',
+//   component: Layout,
+//   redirect: 'noredirect',
+//   name: 'diandang',
   //   meta: { title: '典当管理', icon: 'form', roles: ['uuuu'] },
   //   children: [
-    //     {
-      //       path: 'company/ywlx/index',
+//     {
+//       path: 'company/ywlx/index',
   //       name: 'ywgl',
   //       component: () => import('@/views/diandang/company/ywlx/index'),
   //       meta: { title: '业务管理', icon: 'form', roles: ['admin'] }
